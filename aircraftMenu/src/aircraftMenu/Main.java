@@ -1,10 +1,14 @@
 package aircraftMenu;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 //import java.util.ArrayList;
 //import java.util.List;
 import java.util.Scanner;
 
-public class Main 
+import javax.swing.SwingUtilities;
+
+public class Main implements ActionListener
 {
 	
 	//List<String> seats = new ArrayList<String>();
@@ -12,13 +16,19 @@ public class Main
 	static String[] passengerNames = new String[14];
 	static Scanner inputScanner = new Scanner(System.in);	
 	
-	public static void main(String args[])
+	public static void main(String args[])	
 	{		
+		SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new GraphicInterface().createFrameWindow();
+            }
+        });
 		mainMenu();
 	}
 	
 	public static void mainMenu()
-	{
+	{		
 		System.out.println("Please select an option");
 		System.out.println("1 - Book Tickets");
 		System.out.println("2 - Display Seats");
@@ -87,6 +97,12 @@ public class Main
 		System.out.println("Type anything to return to main menu");
 		Main.askForString();
 		Main.mainMenu();
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		//This is button handler. Work on this
+		
 	}
 
 }
