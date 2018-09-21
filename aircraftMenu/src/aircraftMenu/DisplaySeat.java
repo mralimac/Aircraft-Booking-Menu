@@ -15,8 +15,8 @@ public class DisplaySeat extends Main
 			}
 			else
 			{
-				System.out.println("Seat "+ i +" is booked by "+ Main.passengerNames[i]);
-				System.out.println("For £"+ Main.seats[i][1]);
+				System.out.println("Seat "+ i +" is booked by "+ Main.passengerNames[i] + " for £" + Main.seats[i][1]);
+				
 			}
 		}
 		Main.returnToMainMenu();

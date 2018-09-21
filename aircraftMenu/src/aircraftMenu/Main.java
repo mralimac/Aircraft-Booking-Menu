@@ -17,13 +17,15 @@ public class Main implements ActionListener
 	static Scanner inputScanner = new Scanner(System.in);	
 	
 	public static void main(String args[])	
-	{		
-		SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new GraphicInterface().createFrameWindow();
-            }
-        });
+	{
+		
+		//GUI Experiment - Do Later
+//		SwingUtilities.invokeLater(new Runnable() {
+//            @Override
+//            public void run() {
+//                new GraphicInterface().createFrameWindow();
+//            }
+//        });
 		mainMenu();
 	}
 	
